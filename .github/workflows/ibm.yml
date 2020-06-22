@@ -15,6 +15,7 @@ jobs:
     steps:
     - uses: actions/checkout@v2
 
+
     - name: Init
       run: |
         chmod -R 777 ./IBM_Cloud_CLI/
@@ -40,4 +41,5 @@ jobs:
         IBM_APP_NAME: ${{ secrets.IBM_APP_NAME }}
       run: |
         ./IBM_Cloud_CLI/ibmcloud cf restart "$IBM_APP_NAME"
+ 
  
